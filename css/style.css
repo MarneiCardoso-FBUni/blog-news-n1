@@ -1,0 +1,137 @@
+
+/* Importa a fonte Open Sans (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Reset (limpa os valores padrão do navegadores) */
+* {
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+
+    /* Scroll suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dddddd;
+
+    /* Reset (zera os valores padrão) */
+    margin: 0;
+}
+
+/* ===== Barra de Navegação ===== */
+nav {
+    /* Fixa a navbar no topo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Posiciona a camada na frente das demais */
+    z-index: 1000;
+    width: 100%;
+
+    color: #f9f9f9;
+    background-color: #232323;
+    /* padding-top: 16px;
+    padding-right: 64px;
+    padding-bottom: 16px;
+    padding-left: 64px; */
+    padding: 16px 64px;
+
+    /* Mostra os elementos em linha */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700; /* bold (negrito) */
+}
+
+.logo span {
+    color: #919eff;
+}
+
+a {
+    color: #f9f9f9;
+    text-decoration: none;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #919eff;
+}
+
+/* ===== Banner ===== */
+header {
+    height: 400px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/02/01/00/56/news-1172463_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    /* filter: opacity(0.5); */
+    /* filter: grayscale(0.8); */
+    filter: brightness(35%);
+}
+
+/* ===== Main (corpo da página) ===== */
+main {
+    padding: 64px;
+}
+
+section {
+    min-height: 500px;
+    margin-bottom: 32px;
+    padding-top: 64px;
+
+    /* TESTE */
+    border: solid 1px red;
+}
+
+article {
+    height: 300px;
+    display: flex;
+    margin-bottom: 24px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    /* Esconder o que está sobrando */
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+article img {
+    height: 100%;
+}
+
+article div {
+    padding: 16px;
+}
+
+article:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    /* Sombra */
+    box-shadow: 0px 8px  8px       2px      #929292;
+    /*          X    Y   desfoque  espessura   cor */
+}
+
+
+/* ===== Footer (rodapé) ===== */
+footer {
+    text-align: justify;
+    background-color: #232323;
+    color: #b1b1b1;
+    height: 200px;
+    /* min-height: 200px; */
+    padding: 64px;
+
+    display: grid;
+    /* grid-template-columns: 500px auto 200px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    gap: 32px;
+
+}
